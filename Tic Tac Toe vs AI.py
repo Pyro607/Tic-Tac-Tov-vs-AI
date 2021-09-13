@@ -26,12 +26,12 @@ def printBoard(board):
 def placeMove(symbol, pos):
     board[pos] = symbol
 
-def main():
-    pass
-
-
 def cpuMove():
     pass
 
 def playerMove():
     pass
+
+def main():
+    pass
+
