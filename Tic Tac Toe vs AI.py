@@ -23,10 +23,15 @@ def printBoard(board):
     print(" " + board[7] + " | " + board[8] + " | " + board[9])
     print("   |   |")
 
-def makeMove(symbol, pos):
+def placeMove(symbol, pos):
     board[pos] = symbol
 
 def main():
     pass
 
 
+def cpuMove():
+    pass
+
+def playerMove():
+    pass
