@@ -1,6 +1,7 @@
 #Tic Tac Toe vs AI
 
-#plyr_or_cpu = 0 needed?
+#plyr_or_cpu = 0
+#needed?
 
 
 cpu_diff = 0
@@ -21,4 +22,11 @@ def printBoard(board):
     print("   |   |")
     print(" " + board[7] + " | " + board[8] + " | " + board[9])
     print("   |   |")
+
+def makeMove(symbol, pos):
+    board[pos] = symbol
+
+def main():
+    pass
+
 
