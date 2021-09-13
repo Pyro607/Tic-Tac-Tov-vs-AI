@@ -66,3 +66,5 @@ def main():
         pass
     elif cpu_opponent == False:
         pass
+
+main()
