@@ -1,8 +1,6 @@
 #Tic Tac Toe vs AI
 
-#plyr_or_cpu = 0
-#needed?
-
+cpu_opponent = True
 
 cpu_diff = 0
 #0 = easy, 1 = medium, 2 = hard, 3 = makes best move possible every round
@@ -33,7 +31,8 @@ def playerMove():
     pass
 
 def plyr_or_cpu():
-    pass
+    opponent_choice = input("Do you wish to play against the CPU? (Y | N)")
+    
 
 def main():
-    print("Welcome to Tic Tac Toe, do you wish to play against the CPU or with another player?")
+    print("Welcome to my Python Terminal Game of Tic Tac Toe. You can play with another Human or against the CPU!")
