@@ -32,6 +32,8 @@ def cpuMove():
 def playerMove():
     pass
 
-def main():
+def plyr_or_cpu():
     pass
 
+def main():
+    print("Welcome to Tic Tac Toe, do you wish to play against the CPU or with another player?")
