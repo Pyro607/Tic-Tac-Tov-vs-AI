@@ -32,7 +32,14 @@ def playerMove():
 
 def plyr_or_cpu():
     opponent_choice = input("Do you wish to play against the CPU? (Y | N)")
+    if opponent_choice == "Y" or "y":
+        print("You have chosen to play against the CPU.")
+        cpu_opponent = True
+    elif opponent_choice == "N" or "n":
+        print("You have chosen to play againt another player.")
+        cpu_opponent = False
+    else:
+        print("The game did not recognise your input and has defaulted to a CPU opponent.")
     
-
 def main():
     print("Welcome to my Python Terminal Game of Tic Tac Toe. You can play with another Human or against the CPU!")
