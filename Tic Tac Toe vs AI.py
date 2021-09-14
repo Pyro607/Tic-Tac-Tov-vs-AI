@@ -50,7 +50,7 @@ def cpu_move():
     corner_moves = [1, 3, 7, 9]
     edge_moves = [2, 4, 6, 8]
     center_move = [5]
-    if cpu_setting = 3:
+    if cpu_setting == 3:
         for letter in ["O", "X"]:
             for i in possible_moves:
                 board_copy = board[:]
@@ -79,17 +79,22 @@ def cpu_move():
                 return move #step 5
 
         open_edges = []
-            for y in possible_moves:
-                if y in edge_moves:
-                    open_corners.append[y]
-            if len(open_edges) > 0:
-                move = select_random(open_edges)
-                return move #step 6
-        #step 7
-        
-                 
+        for y in possible_moves:
+            if y in edge_moves:
+                open_corners.append[y]
+        if len(open_edges) > 0:
+            move = select_random(open_edges)
+            return move #step 6 (and 7 essentially)
+
+        return move #step 8
+
     elif cpu_setting = 2:
-        pass
+        if len(possible_moves) > 0:
+            move = select_random(possible_moves)
+            return move
+        else:
+            return move
+
     elif cpu_setting = 1:
         pass
 
