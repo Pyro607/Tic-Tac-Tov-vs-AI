@@ -25,8 +25,15 @@ def place_move(symbol, pos):
 def pos_is_free(y):
     return board[y] == " "
 
+#winning move
+#block winning player move
+#place in corner (will have to be rand?)
+#place in center
+#place in edge
+#only 1 place left
+#no space left
 def cpu_move():
-    #will need to research this
+    pass
 
 
 
@@ -95,7 +102,28 @@ def main():
             print_board()
         else:
             print("Sorry, the CPU outsmarted you...")
+            break
 
 
         if not(win_condition(board, "X")):
-            cpu_move()     
+            move = cpu_move()     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
