@@ -161,14 +161,7 @@ def player_move():
   
 
 def win_condition(board, symbol):
-    return (board[1] == symbol and board[2] == symbol and board[3] == symbol) or
-    (board[4] == symbol and board[5] == symbol and board[6] == symbol) or
-    (board[7] == symbol and board[8] == symbol and board[9] == symbol) or
-    (board[1] == symbol and board[4] == symbol and board[7] == symbol) or
-    (board[2] == symbol and board[5] == symbol and board[8] == symbol) or
-    (board[3] == symbol and board[6] == symbol and board[9] == symbol) or
-    (board[1] == symbol and board[5] == symbol and board[9] == symbol) or
-    (board[3] == symbol and board[5] == symbol and board[7] == symbol)
+    return (board[1] == symbol and board[2] == symbol and board[3] == symbol) or (board[4] == symbol and board[5] == symbol and board[6] == symbol) or (board[7] == symbol and board[8] == symbol and board[9] == symbol) or (board[1] == symbol and board[4] == symbol and board[7] == symbol) or (board[2] == symbol and board[5] == symbol and board[8] == symbol) or (board[3] == symbol and board[6] == symbol and board[9] == symbol) or (board[1] == symbol and board[5] == symbol and board[9] == symbol) or (board[3] == symbol and board[5] == symbol and board[7] == symbol)
 
 def is_board_full(board):
     if board.count(" ") > 1:
@@ -207,8 +200,12 @@ def main():
 
 
         if not(win_condition(board, "X")):
-            move = cpu_move()     
-
+            move = cpu_move()
+            if move == 0:
+                print("The game has tied, neither playerer has won.")
+        else:
+            print("You have won the match!")
+            break
 
 
 
