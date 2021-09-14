@@ -30,14 +30,23 @@ def cpu_move():
 def player_move():
     pass
 
+def win_condition(board, symbol):
+    return (board[1] == symbol and board[2] == symbol and board[3] == symbol) or
+    (board[4] == symbol and board[5] == symbol and board[6] == symbol) or
+    (board[7] == symbol and board[8] == symbol and board[9] == symbol) or
+    (board[1] == symbol and board[4] == symbol and board[7] == symbol) or
+    (board[2] == symbol and board[5] == symbol and board[8] == symbol) or
+    (board[3] == symbol and board[6] == symbol and board[9] == symbol) or
+    (board[1] == symbol and board[5] == symbol and board[9] == symbol) or
+    (board[3] == symbol and board[5] == symbol and board[7] == symbol) or
+
 #def is_board_full():
     #pass
 
 #def cpu_rand_move():
     #pass
 
-#def win_condition():
-    #pass
+
 
 def plyr_or_cpu():
     opponent_choice = input("Do you wish to play against the CPU? (Y | N)")
