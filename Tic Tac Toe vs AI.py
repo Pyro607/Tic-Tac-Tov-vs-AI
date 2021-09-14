@@ -47,6 +47,9 @@ def pos_is_free(y):
 def cpu_move():
     possible_moves = [x for x, letter in enumerate(board) if letter == " " and x != 0]
     move = 0 #default value that can be checked later in main()
+    corner_moves = [1, 3, 7, 9]
+    edge_moves = [2, 4, 6, 8]
+    center_move = [5]
     if cpu_setting = 3:
         for letter in ["O", "X"]:
             for i in possible_moves:
@@ -55,7 +58,8 @@ def cpu_move():
                 if win_condition(board_copy, letter)
                     move = i
                     return move #step 1 and 2
-        if 
+        if last_player_move 
+            
             
     elif cpu_setting = 2:
         pass
