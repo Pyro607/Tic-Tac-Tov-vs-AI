@@ -64,7 +64,6 @@ def cpu_move():
                 move = 5
                 return move #step 3
             
-
         if last_player_move in center_move:
             open_corners = []
             for y in possible_moves:
@@ -78,9 +77,17 @@ def cpu_move():
             if 5 in possible_moves:
                 move = 5
                 return move #step 5
+
+        open_edges = []
+            for y in possible_moves:
+                if y in edge_moves:
+                    open_corners.append[y]
+            if len(open_edges) > 0:
+                move = selectRandom(open_edges)
+                return move #step 6
+        #step 7
         
-        
-            
+                 
     elif cpu_setting = 2:
         pass
     elif cpu_setting = 1:
