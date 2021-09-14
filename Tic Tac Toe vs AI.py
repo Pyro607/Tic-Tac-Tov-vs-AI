@@ -1,6 +1,6 @@
 #Tic Tac Toe vs AI
 
-cpu_setting = 1
+cpu_setting = 3
 #1 = easy, 2 = medium, 3 = hard, best move possible every round
 
 board = [" " for i in range(10)]
@@ -59,28 +59,28 @@ def cpu_move():
                     move = i
                     return move #step 1 and 2
 
-        if last_player_move in corner_moves:
+        if last_player_move in [1, 3, 7, 9]:
             if 5 in possible_moves:
                 move = 5
                 return move #step 3
             
-        if last_player_move in center_move:
+        if last_player_move == 5:
             open_corners1 = []
             for y in possible_moves:
-                if y in corner_moves:
+                if y in [1, 3, 7, 9]:
                     open_corners1.append(y)
             if len(open_corners1) > 0:
                 move = select_random(open_corners1)
                 return move #step 4
 
-        if last_player_move in edge_moves:
+        if last_player_move in [2, 4, 6, 8]:
             if 5 in possible_moves:
                 move = 5
                 return move #step 5
 
         open_edges1 = []
         for y in possible_moves:
-            if y in edge_moves:
+            if y in [2, 4, 6, 8]:
                 open_edges1.append(y)
         if len(open_edges1) > 0:
             move = select_random(open_edges1)
@@ -98,27 +98,27 @@ def cpu_move():
     elif cpu_setting == 1:
         open_edges2 = []
         for y in possible_moves:
-            if y in edge_moves:
+            if y in e[2, 4, 6, 8]:
                 open_edges2.append(y)
         if len(open_edges2) > 0:
             move = select_random(open_edges2)
             return move #step 6 (and 7 essentially) REVERSED for easy difficuilty
 
-        if last_player_move in edge_moves:
+        if last_player_move in [2, 4, 6, 8]:
             if 5 in possible_moves:
                 move = 5
                 return move #step 5 REVERSED for easy difficuilty
 
-        if last_player_move in center_move:
+        if last_player_move == 5:
             open_corners2 = []
             for y in possible_moves:
-                if y in corner_moves2:
+                if y in [1, 3, 7, 9]:
                     open_corners2.append(y)
             if len(open_corners2) > 0:
                 move = select_random(open_corners2)
                 return move #step 4 REVERSED for easy difficuilty
 
-        if last_player_move in corner_moves:
+        if last_player_move in [1, 3, 7, 9]:
             if 5 in possible_moves:
                 move = 5
                 return move #step 3 REVERSED for easy difficuilty
@@ -188,6 +188,7 @@ def cpu_diff():
 def main():
     print("Welcome to my Python Terminal Game of Tic Tac Toe. You can play against the CPU on varying difficuilty settings!")
     cpu_diff()
+    print("Debug - cpu_setting = ", cpu_setting)
     print_board(board)
     
     while not(is_board_full(board)):
