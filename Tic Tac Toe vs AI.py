@@ -1,6 +1,6 @@
 #Tic Tac Toe vs AI
 
-cpu_setting = 0
+cpu_setting = 1
 #1 = easy, 2 = medium, 3 = hard, best move possible every round
 
 board = [" " for i in range(10)]
