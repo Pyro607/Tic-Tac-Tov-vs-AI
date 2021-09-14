@@ -55,7 +55,7 @@ def cpu_move():
             for i in possible_moves:
                 board_copy = board[:]
                 board_copy[i] = letter
-                if win_condition(board_copy, letter)
+                if win_condition(board_copy, letter):
                     move = i
                     return move #step 1 and 2
 
@@ -88,14 +88,14 @@ def cpu_move():
 
         return move #step 8
 
-    elif cpu_setting = 2:
+    elif cpu_setting == 2:
         if len(possible_moves) > 0:
             move = select_random(possible_moves)
             return move
         else:
             return move
 
-    elif cpu_setting = 1:
+    elif cpu_setting == 1:
         open_edges = []
         for y in possible_moves:
             if y in edge_moves:
@@ -127,7 +127,7 @@ def cpu_move():
             for i in possible_moves:
                 board_copy = board[:]
                 board_copy[i] = letter
-                if win_condition(board_copy, letter)
+                if win_condition(board_copy, letter):
                     move = i
                     return move #step 1 and 2 REVERSED for easy difficuilty
 
@@ -188,12 +188,12 @@ def cpu_diff():
 def main():
     print("Welcome to my Python Terminal Game of Tic Tac Toe. You can play against the CPU on varying difficuilty settings!")
     cpu_diff()
-    print_board()
+    print_board(board)
     
     while not(is_board_full(board)):
         if not(win_condition(board, "O")):
             player_move()
-            print_board()
+            print_board(board)
         else:
             print("Sorry, the CPU outsmarted you...")
             break
@@ -203,10 +203,14 @@ def main():
             move = cpu_move()
             if move == 0:
                 print("The game has tied, neither playerer has won.")
+            else:
+                place_move("O", move)
+                print("The Computer has made its move, now it's your turn.")
+                print_board(board)
         else:
             print("You have won the match!")
             break
-
+main()
 
 
 
