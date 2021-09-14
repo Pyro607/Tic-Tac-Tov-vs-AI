@@ -148,7 +148,7 @@ def player_move():
         try:
             move = int(move)
             if move > 0 and move < 10:
-                if pos_is_free(y):
+                if pos_is_free(move):
                     keep_running = False
                     place_move("X", move)
                     last_player_move = move
