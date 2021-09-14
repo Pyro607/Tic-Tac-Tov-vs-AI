@@ -65,12 +65,12 @@ def cpu_move():
                 return move #step 3
             
         if last_player_move in center_move:
-            open_corners = []
+            open_corners1 = []
             for y in possible_moves:
                 if y in corner_moves:
-                    open_corners.append[y]
-            if len(open_corners) > 0:
-                move = select_random(open_corners)
+                    open_corners1.append[y]
+            if len(open_corners1) > 0:
+                move = select_random(open_corners1)
                 return move #step 4
 
         if last_player_move in edge_moves:
@@ -78,12 +78,12 @@ def cpu_move():
                 move = 5
                 return move #step 5
 
-        open_edges = []
+        open_edges1 = []
         for y in possible_moves:
             if y in edge_moves:
-                open_corners.append[y]
-        if len(open_edges) > 0:
-            move = select_random(open_edges)
+                open_edges1.append[y]
+        if len(open_edges1) > 0:
+            move = select_random(open_edges1)
             return move #step 6 (and 7 essentially)
 
         return move #step 8
@@ -96,12 +96,12 @@ def cpu_move():
             return move
 
     elif cpu_setting == 1:
-        open_edges = []
+        open_edges2 = []
         for y in possible_moves:
             if y in edge_moves:
-                open_corners.append[y]
-        if len(open_edges) > 0:
-            move = select_random(open_edges)
+                open_edges2.append[y]
+        if len(open_edges2) > 0:
+            move = select_random(open_edges2)
             return move #step 6 (and 7 essentially) REVERSED for easy difficuilty
 
         if last_player_move in edge_moves:
@@ -110,12 +110,12 @@ def cpu_move():
                 return move #step 5 REVERSED for easy difficuilty
 
         if last_player_move in center_move:
-            open_corners = []
+            open_corners2 = []
             for y in possible_moves:
-                if y in corner_moves:
-                    open_corners.append[y]
-            if len(open_corners) > 0:
-                move = select_random(open_corners)
+                if y in corner_moves2:
+                    open_corners2.append[y]
+            if len(open_corners2) > 0:
+                move = select_random(open_corners2)
                 return move #step 4 REVERSED for easy difficuilty
 
         if last_player_move in corner_moves:
