@@ -70,7 +70,7 @@ def cpu_move():
                 if y in corner_moves:
                     open_corners.append[y]
             if len(open_corners) > 0:
-                move = selectRandom(open_corners)
+                move = select_random(open_corners)
                 return move #step 4
 
         if last_player_move in edge_moves:
@@ -83,7 +83,7 @@ def cpu_move():
                 if y in edge_moves:
                     open_corners.append[y]
             if len(open_edges) > 0:
-                move = selectRandom(open_edges)
+                move = select_random(open_edges)
                 return move #step 6
         #step 7
         
@@ -93,6 +93,12 @@ def cpu_move():
     elif cpu_setting = 1:
         pass
 
+def select_random(list):
+    import random
+    length = len(list)
+    r = random.randrange(0, length)
+    return list[r]
+    
 
 def player_move():
     keep_running = True
@@ -127,9 +133,6 @@ def is_board_full(board):
         return False
     else:
         return True
-
-#def cpu_rand_move():
-    #pass
 
     
 def cpu_diff():
