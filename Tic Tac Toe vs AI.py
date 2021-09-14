@@ -37,6 +37,12 @@ def player_move():
                 if pos_is_free(y):
                     keep_running = False
                     place_move("X", move)
+                else:
+                    print("This space is invalid, please enter another shortly!")
+            else:
+                print("Please input a number between 1 and 9 that is not occupied to make your move.")
+        else:
+            print("Please input another position.")
                     
 
 def win_condition(board, symbol):
