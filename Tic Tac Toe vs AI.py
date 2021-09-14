@@ -26,7 +26,10 @@ def cpu_move():
     pass
 
 def player_move():
-    pass
+    keep_running = True
+    while keep_running:
+        move = input("Input the position you would like to place your X (1 top left - 9 bottom right):")
+        
 
 def win_condition(board, symbol):
     return (board[1] == symbol and board[2] == symbol and board[3] == symbol) or
