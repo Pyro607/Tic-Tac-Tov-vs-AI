@@ -34,7 +34,7 @@ def pos_is_free(y):
 # 2. block winning player move
 # 3. if player went in corner, go in center
 # 4. if player went in center, go in corner
-# 5. if player wen on edge, go in center
+# 5. if player went on edge, go in center
 # 6. go on edge
 # 7. only 1 place left
 # 8. no space left
@@ -62,7 +62,7 @@ def cpu_move():
         if last_player_move in corner_moves:
             if 5 in possible_moves:
                 move = 5
-                return move
+                return move #step 3
             
 
         if last_player_move in center_move:
@@ -72,7 +72,14 @@ def cpu_move():
                     open_corners.append[y]
             if len(open_corners) > 0:
                 move = selectRandom(open_corners)
-                return move #step 4     
+                return move #step 4
+
+        if last_player_move in edge_moves:
+            if 5 in possible_moves:
+                move = 5
+                return move #step 5
+        
+        
             
     elif cpu_setting = 2:
         pass
