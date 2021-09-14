@@ -110,6 +110,7 @@ def player_move():
     while keep_running:
         move = input("Input the position you would like to place your X (1 top left - 9 bottom right):")
         try:
+            move = int(move)
             if move > 0 and move < 10:
                 if pos_is_free(y):
                     keep_running = False
