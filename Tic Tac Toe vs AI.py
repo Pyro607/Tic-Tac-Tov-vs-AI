@@ -75,4 +75,8 @@ def main():
             player_move()
             print_board()
         else:
-            print("Sorry, the CPU outsmarted you...")        
+            print("Sorry, the CPU outsmarted you...")
+
+
+        if not(win_condition(board, "X")):
+            cpu_move()     
