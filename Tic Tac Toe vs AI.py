@@ -8,7 +8,7 @@ cpu_setting = 1
 board = [" " for i in range(10)]
 #range 10 instead of 9 to account for 0 index when player is making a move
 
-def printBoard(board):
+def print_board(board):
     print("   |   |")
     print(" " + board[1] + " | " + board[2] + " | " + board[3])
     print("   |   |")
@@ -29,6 +29,15 @@ def cpu_move():
 
 def player_move():
     pass
+
+#def is_board_full():
+    #pass
+
+#def cpu_rand_move():
+    #pass
+
+#def win_condition():
+    #pass
 
 def plyr_or_cpu():
     opponent_choice = input("Do you wish to play against the CPU? (Y | N)")
@@ -66,4 +75,6 @@ def main():
         cpu_diff()
     elif cpu_opponent == False:
         print("Please take it in turns to make moves.")
+    print_board()
+    
     
