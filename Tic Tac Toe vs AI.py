@@ -39,7 +39,7 @@ def plyr_or_cpu():
         print("You have chosen to play againt another player.")
         cpu_opponent = False
     else:
-        print("The game did not recognise your input and has defaulted to a CPU opponent.")
+        print("The game did not recognise your input and has defaulted to the previous choice.")
     
 def cpu_diff():
     cpu_setting_choice = input("Please select a difficuilty setting for the CPU, starting at 1 for Easy, 2 for Medium, 3 for Hard and 4 for Very Hard: ")
@@ -56,7 +56,7 @@ def cpu_diff():
         print("You have selected the Very Hard setting for the CPU, the CPU will now play the best move possible every round.")
         cpu_setting = 4
     else:
-        print("Your input was not recognised and the CPU defaulted to the Easiest Setting.")
+        print("Your input was not recognised and the CPU defaulted to the previous setting.")
 
 def main():
     print("Welcome to my Python Terminal Game of Tic Tac Toe. You can play with another Human or against the CPU!")
@@ -66,5 +66,3 @@ def main():
         pass
     elif cpu_opponent == False:
         pass
-
-main()
