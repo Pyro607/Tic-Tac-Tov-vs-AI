@@ -26,7 +26,9 @@ def pos_is_free(y):
     return board[y] == " "
 
 def cpu_move():
-    pass
+    #will need to research this
+
+
 
 def player_move():
     keep_running = True
@@ -41,9 +43,9 @@ def player_move():
                     print("This space is invalid, please enter another shortly!")
             else:
                 print("Please input a number between 1 and 9 that is not occupied to make your move.")
-        else:
+        except:
             print("Please input another position.")
-                    
+  
 
 def win_condition(board, symbol):
     return (board[1] == symbol and board[2] == symbol and board[3] == symbol) or
