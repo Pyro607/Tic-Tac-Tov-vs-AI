@@ -63,6 +63,7 @@ def main():
     plyr_or_cpu()
     print("Thank you for choosing your opponent!")
     if cpu_opponent == True:
-        pass
+        cpu_diff()
     elif cpu_opponent == False:
-        pass
+        print("Please take it in turns to make moves.")
+    
