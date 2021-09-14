@@ -43,7 +43,7 @@ def pos_is_free(y):
 # 1. Places in a random position every round
 
 # - Easy Setting:
-# 1. Places in a position that will maximise the player's chance of winning, cpu plays a terrible move
+# 1. Reverse Hard Setting (Step 8 will still come last)
 def cpu_move():
     possible_moves = [x for x, letter in enumerate(board) if letter == " " and x != 0]
     move = 0 #default value that can be checked later in main()
@@ -96,7 +96,43 @@ def cpu_move():
             return move
 
     elif cpu_setting = 1:
-        pass
+        open_edges = []
+        for y in possible_moves:
+            if y in edge_moves:
+                open_corners.append[y]
+        if len(open_edges) > 0:
+            move = select_random(open_edges)
+            return move #step 6 (and 7 essentially) REVERSED for easy difficuilty
+
+        if last_player_move in edge_moves:
+            if 5 in possible_moves:
+                move = 5
+                return move #step 5 REVERSED for easy difficuilty
+
+        if last_player_move in center_move:
+            open_corners = []
+            for y in possible_moves:
+                if y in corner_moves:
+                    open_corners.append[y]
+            if len(open_corners) > 0:
+                move = select_random(open_corners)
+                return move #step 4 REVERSED for easy difficuilty
+
+        if last_player_move in corner_moves:
+            if 5 in possible_moves:
+                move = 5
+                return move #step 3 REVERSED for easy difficuilty
+
+        for letter in ["O", "X"]:
+            for i in possible_moves:
+                board_copy = board[:]
+                board_copy[i] = letter
+                if win_condition(board_copy, letter)
+                    move = i
+                    return move #step 1 and 2 REVERSED for easy difficuilty
+
+        return move #step 8 
+    
 
 def select_random(list):
     import random
