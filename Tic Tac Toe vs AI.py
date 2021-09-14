@@ -63,9 +63,6 @@ def cpu_move():
         pass
 
 
-def record_last_player_move():
-    pass
-
 def player_move():
     keep_running = True
     while keep_running:
@@ -75,6 +72,7 @@ def player_move():
                 if pos_is_free(y):
                     keep_running = False
                     place_move("X", move)
+                    last_player_move = move
                 else:
                     print("This space is invalid, please enter another shortly!")
             else:
