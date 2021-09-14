@@ -38,8 +38,11 @@ def win_condition(board, symbol):
     (board[1] == symbol and board[5] == symbol and board[9] == symbol) or
     (board[3] == symbol and board[5] == symbol and board[7] == symbol)
 
-#def is_board_full():
-    #pass
+def is_board_full(board):
+    if board.count(" ") > 1:
+        return False
+    else:
+        return True
 
 #def cpu_rand_move():
     #pass
