@@ -38,7 +38,7 @@ def win_condition(board, symbol):
     (board[2] == symbol and board[5] == symbol and board[8] == symbol) or
     (board[3] == symbol and board[6] == symbol and board[9] == symbol) or
     (board[1] == symbol and board[5] == symbol and board[9] == symbol) or
-    (board[3] == symbol and board[5] == symbol and board[7] == symbol) or
+    (board[3] == symbol and board[5] == symbol and board[7] == symbol)
 
 #def is_board_full():
     #pass
