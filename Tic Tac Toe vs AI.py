@@ -58,8 +58,15 @@ def cpu_move():
                 if win_condition(board_copy, letter)
                     move = i
                     return move #step 1 and 2
-        if last_player_move 
-            
+
+        if last_player_move in corner_moves:
+            open_corners = []
+            for y in possible_moves:
+                if y in corner_moves:
+                    open_corners.append[y]
+            if len(open_corners) > 0:
+                move = selectRandom(open_corners)
+                return move            
             
     elif cpu_setting = 2:
         pass
