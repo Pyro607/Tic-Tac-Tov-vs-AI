@@ -33,8 +33,10 @@ def player_move():
     while keep_running:
         move = input("Input the position you would like to place your X (1 top left - 9 bottom right):")
         try:
-            if move > 0 and < 10:
+            if move > 0 and move < 10:
                 if pos_is_free(y):
+                    keep_running = False
+                    place_move("X", move)
                     
 
 def win_condition(board, symbol):
