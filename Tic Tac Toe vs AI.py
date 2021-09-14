@@ -22,6 +22,9 @@ def print_board(board):
 def place_move(symbol, pos):
     board[pos] = symbol
 
+def pos_is_free(y):
+    return board[y] == " "
+
 def cpu_move():
     pass
 
@@ -29,7 +32,10 @@ def player_move():
     keep_running = True
     while keep_running:
         move = input("Input the position you would like to place your X (1 top left - 9 bottom right):")
-        
+        try:
+            if move > 0 and < 10:
+                if pos_is_free(y):
+                    
 
 def win_condition(board, symbol):
     return (board[1] == symbol and board[2] == symbol and board[3] == symbol) or
