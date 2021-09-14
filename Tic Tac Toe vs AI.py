@@ -1,6 +1,6 @@
 #Tic Tac Toe vs AI
 
-cpu_setting = 1
+cpu_setting = 0
 #1 = easy, 2 = medium, 3 = hard, best move possible every round
 
 board = [" " for i in range(10)]
@@ -68,7 +68,7 @@ def cpu_move():
             open_corners1 = []
             for y in possible_moves:
                 if y in corner_moves:
-                    open_corners1.append[y]
+                    open_corners1.append(y)
             if len(open_corners1) > 0:
                 move = select_random(open_corners1)
                 return move #step 4
@@ -81,7 +81,7 @@ def cpu_move():
         open_edges1 = []
         for y in possible_moves:
             if y in edge_moves:
-                open_edges1.append[y]
+                open_edges1.append(y)
         if len(open_edges1) > 0:
             move = select_random(open_edges1)
             return move #step 6 (and 7 essentially)
@@ -99,7 +99,7 @@ def cpu_move():
         open_edges2 = []
         for y in possible_moves:
             if y in edge_moves:
-                open_edges2.append[y]
+                open_edges2.append(y)
         if len(open_edges2) > 0:
             move = select_random(open_edges2)
             return move #step 6 (and 7 essentially) REVERSED for easy difficuilty
@@ -113,7 +113,7 @@ def cpu_move():
             open_corners2 = []
             for y in possible_moves:
                 if y in corner_moves2:
-                    open_corners2.append[y]
+                    open_corners2.append(y)
             if len(open_corners2) > 0:
                 move = select_random(open_corners2)
                 return move #step 4 REVERSED for easy difficuilty
