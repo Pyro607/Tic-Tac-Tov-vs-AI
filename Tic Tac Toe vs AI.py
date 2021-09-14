@@ -29,11 +29,12 @@ def pos_is_free(y):
 # - Hard Setting :
 # 1. winning move
 # 2. block winning player move
-# 3. place in corner (will have to be rand?)
-# 4. place in center
-# 5. place in edge
-# 6. only 1 place left
-# 7. no space left
+# 3. if player went in corner, go in center
+# 4. if player went in center, go in corner
+# 5. if player wen on edge, go in center
+# 6. go on edge
+# 7. only 1 place left
+# 8. no space left
 
 # - Medium Setting:
 # 1. Places in a random position every round
@@ -41,8 +42,8 @@ def pos_is_free(y):
 # - Easy Setting:
 # 1. Places in a position that will maximise the player's chance of winning, cpu plays a terrible move
 def cpu_move():
-    pass
-
+    possible_moves = [x for x, letter in enumerate(board) if letter == " " and x != 0]
+    move = 0 #default value that can be checked later in main()
 
 
 def player_move():
