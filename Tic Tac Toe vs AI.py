@@ -143,6 +143,7 @@ def is_board_full(board):
     
 def cpu_diff():
     cpu_setting_choice = input("Please select a difficuilty setting for the CPU, starting at 1 for Easy, 2 for Medium, 3 for Hard: ")
+    cpu_setting_choice = int(cpu_setting_choice)
     if cpu_setting_choice == 1:
         print("You have selected the Easiest setting for the CPU.")
         cpu_setting = 1
