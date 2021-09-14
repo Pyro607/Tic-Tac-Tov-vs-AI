@@ -6,6 +6,9 @@ cpu_setting = 1
 board = [" " for i in range(10)]
 #range 10 instead of 9 to account for 0 index when player is making a move
 
+last_player_move = 0
+#records what the last move made by the player was, important for allowing the AI to make the best possible move
+
 def print_board(board):
     print("   |   |")
     print(" " + board[1] + " | " + board[2] + " | " + board[3])
@@ -44,7 +47,24 @@ def pos_is_free(y):
 def cpu_move():
     possible_moves = [x for x, letter in enumerate(board) if letter == " " and x != 0]
     move = 0 #default value that can be checked later in main()
+    if cpu_setting = 3:
+        for letter in ["O", "X"]:
+            for i in possible_moves:
+                board_copy = board[:]
+                board_copy[i] = letter
+                if win_condition(board_copy, letter)
+                    move = i
+                    return move #step 1 and 2
+        if 
+            
+    elif cpu_setting = 2:
+        pass
+    elif cpu_setting = 1:
+        pass
 
+
+def record_last_player_move():
+    pass
 
 def player_move():
     keep_running = True
