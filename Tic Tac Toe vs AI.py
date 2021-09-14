@@ -1,7 +1,7 @@
 #Tic Tac Toe vs AI
 
 cpu_setting = 1
-#1 = easy, 2 = medium, 3 = hard, 4 = makes best move possible every round
+#1 = easy, 2 = medium, 3 = hard, best move possible every round
 
 board = [" " for i in range(10)]
 #range 10 instead of 9 to account for 0 index when player is making a move
@@ -25,13 +25,21 @@ def place_move(symbol, pos):
 def pos_is_free(y):
     return board[y] == " "
 
-#winning move
-#block winning player move
-#place in corner (will have to be rand?)
-#place in center
-#place in edge
-#only 1 place left
-#no space left
+#What cpu difficuilty setting? will determine how moves are calculated
+# - Hard Setting :
+# 1. winning move
+# 2. block winning player move
+# 3. place in corner (will have to be rand?)
+# 4. place in center
+# 5. place in edge
+# 6. only 1 place left
+# 7. no space left
+
+# - Medium Setting:
+# 1. Places in a random position every round
+
+# - Easy Setting:
+# 1. Places in a position that will maximise the player's chance of winning, cpu plays a terrible move
 def cpu_move():
     pass
 
@@ -75,7 +83,7 @@ def is_board_full(board):
 
     
 def cpu_diff():
-    cpu_setting_choice = input("Please select a difficuilty setting for the CPU, starting at 1 for Easy, 2 for Medium, 3 for Hard and 4 for Very Hard: ")
+    cpu_setting_choice = input("Please select a difficuilty setting for the CPU, starting at 1 for Easy, 2 for Medium, 3 for Hard: ")
     if cpu_setting_choice == 1:
         print("You have selected the Easiest setting for the CPU.")
         cpu_setting = 1
@@ -83,11 +91,8 @@ def cpu_diff():
         print("You have selected the Medium setting for the CPU.")
         cpu_setting = 2
     elif cpu_setting_choice == 3:
-        print("You have selected the Hard setting for the CPU.")
+        print("You have selected the Hard setting for the CPU, the CPU will now play the best move possible every round.")
         cpu_setting = 3
-    elif cpu_setting == 4:
-        print("You have selected the Very Hard setting for the CPU, the CPU will now play the best move possible every round.")
-        cpu_setting = 4
     else:
         print("Your input was not recognised and the CPU defaulted to the previous setting.")
 
