@@ -70,4 +70,9 @@ def main():
     cpu_diff()
     print_board()
     
-    
+    while not(is_board_full(board)):
+        if not(win_condition(board, "O")):
+            player_move()
+            print_board()
+        else:
+            print("Sorry, the CPU outsmarted you...")        
