@@ -36,6 +36,7 @@ def pos_is_free(y):
 # 4. if player went in center, go in corner
 # 5. if player went on edge, go in center
 # 5.5 if you go in an edge, the bot goes center, if you then go in an adjacent edge, the bot will go in an edge, you can then fill in the corner between the 2 edges you went in and get a guarnateed win
+# 5.5.5 go on a corner if available
 # 6. go on edge
 # 7. pick a random spot of any spots left
 # 8. no space left
@@ -91,13 +92,14 @@ def cpu_move():
 
         if (board[8] == "X" and board [6] == "X"):
             if 9 in possible_moves:
-            move = 9
-            return move #step 5.5
+                move = 9
+                return move #step 5.5
 
         if (board[6] == "X" and board [2] == "X"):
             if 3 in possible_moves:
-            move = 3
-            return move #step 5.5
+                move = 3
+                return move #step 5.5
+        # step 5.5.5
 
         open_edges1 = []
         for y in possible_moves:
