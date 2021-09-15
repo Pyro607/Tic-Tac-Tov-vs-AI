@@ -36,7 +36,7 @@ def pos_is_free(y):
 # 4. if player went in center, go in corner
 # 5. if player went on edge, go in center
 # 6. go on edge
-# 7. only 1 place left
+# 7. pick a random spot of any spots left
 # 8. no space left
 
 # - Medium Setting:
