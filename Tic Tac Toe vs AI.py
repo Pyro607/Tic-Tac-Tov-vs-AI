@@ -80,18 +80,22 @@ def cpu_move():
                 return move #step 5
 
         if (board[2] == "X" and board [4] == "X"):
-            move = 1
-            return move #step 5.5
+            if 1 in possible_moves:
+                move = 1
+                return move #step 5.5
 
         if (board[4] == "X" and board [8] == "X"):
-            move = 7
-            return move #step 5.5
+            if 7 in possible_moves:
+                move = 7
+                return move #step 5.5
 
         if (board[8] == "X" and board [6] == "X"):
+            if 9 in possible_moves:
             move = 9
             return move #step 5.5
 
         if (board[6] == "X" and board [2] == "X"):
+            if 3 in possible_moves:
             move = 3
             return move #step 5.5
 
