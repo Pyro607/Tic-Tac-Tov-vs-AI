@@ -99,7 +99,14 @@ def cpu_move():
             if 3 in possible_moves:
                 move = 3
                 return move #step 5.5
-        # step 5.5.5
+
+        open_corners3 = []
+        for q in possible_moves:
+            if q in [1, 3, 7, 9]:
+                open_corners3.append(q)
+        if len(open_corners3) > 0:
+            move = select_random(open_corners3)
+            return move #step 5.5.5
 
         open_edges1 = []
         for y in possible_moves:
