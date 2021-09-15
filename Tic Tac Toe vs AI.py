@@ -10,15 +10,15 @@ last_player_move = 0
 #records what the last move made by the player was, important for allowing the AI to make the best possible move
 
 def print_board(board):
-    print("   |   |")
+    print("1  |2  |3")
     print(" " + board[1] + " | " + board[2] + " | " + board[3])
     print("   |   |")
     print("-----------")
-    print("   |   |")
+    print("4  |5  |6")
     print(" " + board[4] + " | " + board[5] + " | " + board[6])
     print("   |   |")
     print("-----------")
-    print("   |   |")
+    print("7  |8  |9")
     print(" " + board[7] + " | " + board[8] + " | " + board[9])
     print("   |   |")
 
@@ -102,7 +102,7 @@ def cpu_move():
     elif cpu_setting == 1:
         open_edges2 = []
         for y in possible_moves:
-            if y in e[2, 4, 6, 8]:
+            if y in [2, 4, 6, 8]:
                 open_edges2.append(y)
         if len(open_edges2) > 0:
             move = select_random(open_edges2)
