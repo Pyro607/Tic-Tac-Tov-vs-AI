@@ -1,6 +1,6 @@
 #Tic Tac Toe vs AI
 
-cpu_setting = 3
+cpu_setting = 2
 #1 = easy, 2 = medium, 3 = hard, best move possible every round
 
 board = [" " for i in range(10)]
@@ -193,12 +193,11 @@ def cpu_diff():
         print("You have selected the Hard setting for the CPU, the CPU will now play the best move possible every round.")
         cpu_setting = 3
     else:
-        print("Your input was not recognised and the CPU defaulted to the previous setting.")
+        print("Your input was not recognised and the CPU defaulted to the medium setting.")
 
 def main():
     print("Welcome to my Python Terminal Game of Tic Tac Toe. You can play against the CPU on varying difficuilty settings!")
     cpu_diff()
-    print("Debug - cpu_setting = ", cpu_setting)
     print_board(board)
     
     while not(is_board_full(board)):
