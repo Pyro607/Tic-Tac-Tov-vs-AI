@@ -88,7 +88,7 @@ def cpu_move():
 
         if len(possible_moves) > 0:
             move = select_random(open_corners1)
-            return move
+            return move #step 7
 
         return move #step 8
 
@@ -137,7 +137,7 @@ def cpu_move():
 
         if len(possible_moves) > 0:
             move = select_random(open_corners1)
-            return move
+            return move #step 7
 
         return move #step 8 
     
@@ -150,6 +150,7 @@ def select_random(list):
     
 
 def player_move():
+    global last_player_move
     keep_running = True
     while keep_running:
         move = input("Input the position you would like to place your X (1 top left - 9 bottom right):")
@@ -179,6 +180,7 @@ def is_board_full(board):
 
     
 def cpu_diff():
+    global cpu_setting
     cpu_setting_choice = input("Please select a difficuilty setting for the CPU, starting at 1 for Easy, 2 for Medium, 3 for Hard: ")
     cpu_setting_choice = int(cpu_setting_choice)
     if cpu_setting_choice == 1:
