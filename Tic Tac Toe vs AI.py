@@ -84,7 +84,11 @@ def cpu_move():
                 open_edges1.append(y)
         if len(open_edges1) > 0:
             move = select_random(open_edges1)
-            return move #step 6 (and 7 essentially)
+            return move #step 6
+
+        if len(possible_moves) > 0:
+            move = select_random(open_corners1)
+            return move
 
         return move #step 8
 
@@ -130,6 +134,10 @@ def cpu_move():
                 if win_condition(board_copy, letter):
                     move = i
                     return move #step 1 and 2 REVERSED for easy difficuilty
+
+        if len(possible_moves) > 0:
+            move = select_random(open_corners1)
+            return move
 
         return move #step 8 
     
