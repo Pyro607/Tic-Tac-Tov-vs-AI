@@ -190,7 +190,7 @@ def cpu_diff():
         print("You have selected the Medium setting for the CPU.")
         cpu_setting = 2
     elif cpu_setting_choice == 3:
-        print("You have selected the Hard setting for the CPU, the CPU will now play the best move possible every round.")
+        print("You have selected the Hard setting for the CPU.")
         cpu_setting = 3
     else:
         print("Your input was not recognised and the CPU defaulted to the medium setting.")
